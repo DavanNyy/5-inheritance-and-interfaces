@@ -21,8 +21,27 @@ package inheritance.webshop;
  * extended by other classes in the exercise.
  */
 public class Product {
+    private String title; //Tuotteen nimi     // tieto talteen
+    private String description; //Tuotteen kuvaus
+    private double price; //Tuotteen hinta
 
-    public Product(String title, String description, double price) {
+    public Product(String title, String description, double price) { // konstruktori tallentaa arvon
         // TODO: add instance variables and complete the constructor
+        this.title = title;  
+        this.description = description;  
+        this.price = price;
+    }
+    public String getTitle() {  // getter palauttaa arvon
+        return title;
+    }
+    public String getDescription() {
+        return description;
+    }
+    public double getPrice() {
+        return price;
+    }
+    @Override
+    public String toString() { // näytetään tekstinä
+        return "product: " + title + ",description: " + description + ", price:" + price;
     }
 }

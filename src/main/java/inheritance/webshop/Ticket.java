@@ -13,6 +13,27 @@ package inheritance.webshop;
  * also skip this class and continue with the next part of the exercise if you
  * feel that you have understood the concept of inheritance.
  */
-public class Ticket {
+public class Ticket extends Product {
+    private String event;
+    private String date;
+
+    public Ticket(String title, String description, double price, String event, String date) {
+        super(title, description, price);
+        this.event = event;
+        this.date = date;
+    }
+
+    public String getEvent() {
+        return event;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket (event=" + event + ", date=" + date + ", toString()" + super.toString() + ")";
+    }
 
 }
