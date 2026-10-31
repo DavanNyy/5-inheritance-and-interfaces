@@ -47,6 +47,9 @@ public class Main {
          * code, right? This is especially useful when you are using a class that you
          * cannot modify, such as a class from a third-party library.
          */
+        PrinterWithTimestamp printer = new PrinterWithTimestamp();
+        Application app2 = new Application(printer);
+        app2.run();
 
     }
 }
